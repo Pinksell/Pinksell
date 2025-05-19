@@ -1,40 +1,22 @@
+/* Stile base per il sito */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff0f5; /* rosa chiarissimo */
+  color: #333;
+  text-align: center;
+  padding: 50px 20px;
   margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
 }
 
-header {
-  background-color: #ff69b4;
-  color: white;
-  padding: 20px;
-  text-align: center;
+/* Titolo principale */
+h1 {
+  font-size: 2.5em;
+  color: #d63384; /* rosa acceso */
+  margin-bottom: 20px;
 }
 
-nav {
-  background-color: #ffd1dc;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 10px;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 20px;
-  text-align: center;
-}
-
-footer {
-  background-color: #eee;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-  color: #666;
+/* Testo descrittivo */
+p {
+  font-size: 1.2em;
+  color: #555;
 }
