@@ -1,95 +1,117 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pink$ell - IL TUO OUTFIT PERFETTO OGNI GIORNO! </title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pink$ell</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f6;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ff4da6;
+      color: white;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .small-note {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    .menu-icon {
+      font-size: 2rem;
+      cursor: pointer;
+      position: absolute;
+      right: 1rem;
+      top: 1.5rem;
+    }
+
+    nav {
+      display: none;
+      background-color: #ffe6f0;
+      padding: 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submenu {
+      display: none;
+      margin-top: 0.5rem;
+    }
+
+    .submenu li {
+      font-weight: normal;
+      margin: 0.3rem 0;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="menu-container">
-  <div class="menu-icon" onclick="toggleMenu()">⋮</div>
-  <div class="menu-content" id="catalogoMenu">
-    <ul>
-      <li>ABITI|JUMPSUIT</li>
-      <li>TOP|T-SHIRT</li>
-      <li>JEANS|PANTALONI</li>
-      <li>GONNE|SHORTS</li>
-      <li>COSTUMI|COPRICOSTUMI</li>
-      <li>SET|TAILLEUR</li>
-      <li>GIACCHE|CAPPOTTI</li>
-      <li>SCARPE</li>
-      <li>ACCESSORI</li>
-    </ul>
-  </div>
-</div>
-    <h1>PinkSell<span style="color:hotpink;">$</span>ell</h1>
-    <!-- Menu a tre puntini -->
-<div style="position: relative; display: inline-block;">
-  <button onclick="toggleMenu()" style="font-size: 24px;">⋮</button>
-  <div id="menu" style="display: none; position: absolute; background-color: white; border: 1px solid #ccc; padding: 10px;">
-    <a href="#" onclick="toggleSubmenu('abbigliamento')">ABBIGLIAMENTO</a><br>
-    <a href="#">SCARPE</a><br>
-    <a href="#">ACCESSORI</a><br>
-    
-    <div id="submenu-abbigliamento" style="display:none; margin-top: 10px; margin-left: 10px;">
-      <a href="#">ABITI|JUMPSUIT</a><br>
-      <a href="#">TOP|T-SHIRT</a><br>
-      <a href="#">GONNE|SHORTS</a><br>
-      <a href="#">JEANS|PANTALONI</a><br>
-      <a href="#">COSTUMI|COPRICOSTUMI</a><br>
-      <a href="#">SET|TAILLEUR</a><br>
-    </div>
-  </div>
-</div>
-
-<script>
-  function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.style.display = (menu.style.display === "block") ? "none" : "block";
-  }
-
-  function toggleSubmenu(section) {
-    var submenu = document.getElementById("submenu-" + section);
-    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
-  }
-</script>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="#">Chi siamo</a>
-      <a href="#">Contatti</a>
-      
-    </nav>
+    <h1>Pink$ell</h1>
+    <div class="subtitle">IL TUO OUTFIT PERFETTO OGNI GIORNO!</div>
+    <div class="menu-icon" onclick="toggleMenu()">⋯</div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2> IL TUO OUTFIT PERFETTO OGNI GIORNO! </h2>
-      <p>Collezioni in arrivo. 
-          Seguici sui social!
-              @_pinksell </p>
-    </section>
+  <nav id="mainMenu">
+    <ul>
+      <li onclick="toggleSubmenu()">Abbigliamento</li>
+      <ul class="submenu" id="submenu">
+        <li>ABITI | JUMPSUIT</li>
+        <li>TOP | T-SHIRT</li>
+        <li>JEANS | PANTALONI</li>
+        <li>GONNE | SHORTS</li>
+        <li>SET | TAILLEUR</li>
+        <li>GIACCHE | CAPPOTTI</li>
+        <li>COSTUMI | COPRICOSTUMI</li>
+      </ul>
+      <li>Scarpe</li>
+      <li>Accessori</li>
+    </ul>
+  </nav>
 
-    <section class="prodotti">
-      
-      
-        
-        
+  <div class="small-note">Collezioni in arrivo. Seguici sui social! @_pinksell</div>
 
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Pinksell - Tutti i diritti riservati</p>
-  </footer>
   <script>
-  function toggleMenu() {
-    var menu = document.getElementById("catalogoMenu");
-    menu.classList.toggle("show");
-  }
-</script>
+    function toggleMenu() {
+      const menu = document.getElementById("mainMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleSubmenu() {
+      const submenu = document.getElementById("submenu");
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
-</html>
+</html> 
