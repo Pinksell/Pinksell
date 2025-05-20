@@ -1,121 +1,87 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pink$ell</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff0f6;
-      color: #333;
-      text-align: center;
-    }
-
-    header {
-      background-color: #ff4da6;
-      color: white;
-      padding: 1.5rem;
-      position: relative;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: bold;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-
-    .small-note {
-      font-size: 0.85rem;
-      color: #444;
-      margin-top: 1rem;
-    }
-
-    .menu-icon {
-      font-size: 2rem;
-      cursor: pointer;
-      position: absolute;
-      right: 1rem;
-      top: 1.5rem;
-    }
-
-    nav {
-      display: none;
-      background-color: #ffe6f0;
-      padding: 1rem 0;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin: 0.5rem 0;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .submenu {
-      display: none;
-      margin-top: 0.5rem;
-    }
-
-    .submenu li {
-      font-weight: normal;
-      margin: 0.3rem 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <h1>Pink$ell</h1>
-    <div class="subtitle">IL TUO OUTFIT PERFETTO OGNI GIORNO!</div>
-    <div class="menu-icon" onclick="toggleMenu()">⋯</div>
+    <div class="nav-top">
+      <div class="logo">Pink<span class="dollar-s">$</span>ell</div>
+      <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="#" onclick="toggleContact()">Contatti</a>
+    </nav>
+
+    <div id="contact-info" class="hidden">
+      <p>Email: __pinksell@gmail.com</p>
+    </div>
+
+    <div id="dropdown-menu" class="dropdown hidden">
+      <div onclick="toggleSubmenu('abbigliamento')">ABBIGLIAMENTO</div>
+      <div onclick="toggleSubmenu('scarpe')">SCARPE</div>
+      <div onclick="toggleSubmenu('accessori')">ACCESSORI</div>
+    </div>
+
+    <div id="abbigliamento" class="submenu hidden">
+      <a class="highlight" href="nuovi-arrivi.html">NUOVI ARRIVI</a>
+      <a href="abiti-jumpsuit.html">ABITI | JUMPSUIT</a>
+      <a href="top-tshirt.html">TOP | T-SHIRT</a>
+      <a href="maglioni-felpe.html">MAGLIONI | FELPE</a>
+      <a href="jeans-pantaloni.html">JEANS | PANTALONI</a>
+      <a href="gonne-shorts.html">GONNE | SHORTS</a>
+      <a href="set-tailleur.html">SET | TAILLEUR</a>
+      <a href="giacche-cappotti.html">GIACCHE | CAPPOTTI</a>
+      <a href="costumi-copricostumi.html">COSTUMI | COPRICOSTUMI</a>
+    </div>
+
+    <div id="scarpe" class="submenu hidden">
+      <a href="tacchi.html">TACCHI</a>
+      <a href="stivali.html">STIVALI</a>
+      <a href="sandali.html">SANDALI</a>
+    </div>
+
+    <div id="accessori" class="submenu hidden">
+      <a href="borse.html">BORSE</a>
+      <a href="cinte.html">CINTE</a>
+      <a href="occhiali.html">OCCHIALI</a>
+      <a href="collane.html">COLLANE</a>
+      <a href="anelli.html">ANELLI</a>
+      <a href="bracciali.html">BRACCIALI</a>
+      <a href="orecchini.html">ORECCHINI</a>
+    </div>
   </header>
 
-  <nav id="mainMenu">
-    <ul>
-      <li onclick="toggleSubmenu()">Abbigliamento</li>
-      <ul class="submenu" id="submenu">
-        <li>ABITI | JUMPSUIT</li>
-        <li>TOP | T-SHIRT</li>
-        <li>JEANS | PANTALONI</li>
-        <li>GONNE | SHORTS</li>
-        <li>SET | TAILLEUR</li>
-        <li>GIACCHE | CAPPOTTI</li>
-        <li>COSTUMI | COPRICOSTUMI</li>
-      </ul>
-      <li>Scarpe</li>
-      <li>Accessori</li>
-    </ul>
-  </nav>
+  <main>
+    <h1 class="hero-title">Pink<span class="dollar-s">$</span>ell</h1>
+    <p class="subtitle">IL TUO OUTFIT PERFETTO OGNI GIORNO!</p>
+  </main>
 
-  <div class="small-note">Collezioni in arrivo. Seguici sui social! @_pinksell</div>
+  <footer>
+    <p>Collezioni in arrivo. Seguici sui social! @_pinksell</p>
+  </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("mainMenu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      document.getElementById("dropdown-menu").classList.toggle("hidden");
     }
-
-    function toggleSubmenu() {
-      const submenu = document.getElementById("submenu");
-      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    function toggleSubmenu(id) {
+      document.querySelectorAll(".submenu").forEach(menu => menu.classList.add("hidden"));
+      document.getElementById(id).classList.toggle("hidden");
+    }
+    function toggleContact() {
+      document.getElementById("contact-info").classList.toggle("hidden");
     }
   </script>
 </body>
-</html> 
-  <p>&copy; 2025 Pinksell - Tutti i diritti riservati</p>
+</html>
+    <p>&copy; 2025 Pinksell - Tutti i diritti riservati</p>
   </footer>
 </body>
 </html>
