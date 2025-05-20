@@ -20,3 +20,47 @@ p {
   font-size: 1.2em;
   color: #555;
 }
+.menu-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #d63384;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff0f5;
+  border: 1px solid #d63384;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-content li {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #8e2b57;
+}
+
+.menu-content li:hover {
+  background-color: #ffd6e8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-content.show {
+  display: block;
+}
