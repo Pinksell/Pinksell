@@ -22,7 +22,34 @@
     </ul>
   </div>
 </div>
-    <h1>Pinksell</h1>
+    <h1>PinkSell<span style="color:hotpink;">$</span>ell</h1>
+    <!-- Menu a tre puntini -->
+<div style="position: relative; display: inline-block;">
+  <button onclick="toggleMenu()" style="font-size: 24px;">⋮</button>
+  <div id="menu" style="display: none; position: absolute; background-color: white; border: 1px solid #ccc; padding: 10px;">
+    <a href="#" onclick="toggleSubmenu('abbigliamento')">Abbigliamento</a><br>
+    <a href="#">Scarpe</a><br>
+    <a href="#">Accessori</a><br>
+    
+    <div id="submenu-abbigliamento" style="display:none; margin-top: 10px; margin-left: 10px;">
+      <a href="#">Abiti</a><br>
+      <a href="#">Gonne</a><br>
+      <a href="#">T-shirt</a><br>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  }
+
+  function toggleSubmenu(section) {
+    var submenu = document.getElementById("submenu-" + section);
+    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+  }
+</script>
     <nav>
       <a href="#">Home</a>
       <a href="#">Shop</a>
