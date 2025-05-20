@@ -1,66 +1,99 @@
-/* Stile base per il sito */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #fff0f5; /* rosa chiarissimo */
-  color: #333;
-  text-align: center;
-  padding: 50px 20px;
   margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fef7f1;
+  color: #4a4a4a;
 }
 
-/* Titolo principale */
-h1 {
-  font-size: 2.5em;
-  color: #d63384; /* rosa acceso */
-  margin-bottom: 20px;
+header {
+  background-color: #fce4ec;
+  padding: 10px;
+  position: relative;
 }
 
-/* Testo descrittivo */
-p {
-  font-size: 1.2em;
-  color: #555;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e91e63;
 }
-.menu-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+
+.dollar-s {
+  color: #d81b60;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu-icon {
   font-size: 24px;
   cursor: pointer;
-  color: #d63384;
 }
 
-.menu-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #fff0f5;
-  border: 1px solid #d63384;
-  border-radius: 8px;
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #b4004e;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffe6f0;
   padding: 10px;
-  z-index: 100;
+  border: 1px solid #d8a1b3;
 }
 
-.menu-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.submenu {
+  background-color: #fff0f5;
+  padding: 10px;
+  margin: 5px 0;
 }
 
-.menu-content li {
-  padding: 8px 12px;
-  font-size: 14px;
-  color: #8e2b57;
-}
-
-.menu-content li:hover {
-  background-color: #ffd6e8;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.menu-content.show {
+.submenu a {
   display: block;
+  margin: 5px 0;
+  color: #b4004e;
+  text-decoration: none;
+}
+
+.highlight {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.hero-title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3rem;
+  color: #e91e63;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #5e5e5e;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fce4ec;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.hidden {
+  display: none;
 }
