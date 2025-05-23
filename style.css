@@ -1,3 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6f0; /* beige chiaro */
+  color: #e91e63; /* fucsia */
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+}
+
+header, nav, footer {
+  background-color: #fff0f6;
+  padding: 20px;
+  border-bottom: 2px solid #e91e63;
+}
+
+a {
+  text-decoration: none;
+  color: #e91e63;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+.submenu, .dropdown {
+  background-color: #fff0f6;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.highlight {
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #e91e63;
+  margin-top: 0;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #a5557a;
+}
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
