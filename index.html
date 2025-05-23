@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pink$ell</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="nav-top">
       <div class="logo">Pink<span class="dollar-s">$</span>ell</div>
-      <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+      <div class="menu-icon" onclick="toggleMenu()" style="cursor:pointer;">⋮</div>
     </div>
 
     <nav class="main-nav">
@@ -24,9 +24,9 @@
     </div>
 
     <div id="dropdown-menu" class="dropdown hidden">
-      <div onclick="toggleSubmenu('abbigliamento')">ABBIGLIAMENTO</div>
-      <div onclick="toggleSubmenu('scarpe')">SCARPE</div>
-      <div onclick="toggleSubmenu('accessori')">ACCESSORI</div>
+      <button onclick="toggleSubmenu('abbigliamento')" style="cursor:pointer;">ABBIGLIAMENTO</button>
+      <button onclick="toggleSubmenu('scarpe')" style="cursor:pointer;">SCARPE</button>
+      <button onclick="toggleSubmenu('accessori')" style="cursor:pointer;">ACCESSORI</button>
     </div>
 
     <div id="abbigliamento" class="submenu hidden">
@@ -60,13 +60,14 @@
 
   <main>
     <div class="logo-container">
-  <img src="logo-pinksell.png" alt="Pink$ell Logo" class="logo-img">
-</div>
+      <img src="logo-pinksell.png" alt="Pink$ell Logo" class="logo-img" />
+    </div>
     <p class="subtitle">IL TUO OUTFIT PERFETTO OGNI GIORNO!</p>
   </main>
 
   <footer>
     <p>Collezioni in arrivo. Seguici sui social! @_pinksell</p>
+    <p>&copy; 2025 Pinksell - Tutti i diritti riservati</p>
   </footer>
 
   <script>
@@ -81,9 +82,5 @@
       document.getElementById("contact-info").classList.toggle("hidden");
     }
   </script>
-</body>
-</html>
-    <p>&copy; 2025 Pinksell - Tutti i diritti riservati</p>
-  </footer>
 </body>
 </html>
