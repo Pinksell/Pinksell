@@ -1,172 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #fdf6f0; /* beige chiaro */
-  color: #e91e63; /* fucsia */
-  font-family: 'Anton', sans-serif;
+  background-color: #fff; /* bianco pulito */
+  font-family: 'Poppins', sans-serif;
+  color: #222; /* testo scuro, leggibile */
   text-align: center;
 }
 
-header, nav, footer {
-  background-color: #fff0f6;
-  padding: 20px;
-  border-bottom: 2px solid #e91e63;
-}
-
-a {
-  text-decoration: none;
-  color: #e91e63;
-  font-weight: bold;
-  margin: 0 10px;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.menu-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-.submenu, .dropdown {
-  background-color: #fff0f6;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.highlight {
-  color: #ff69b4;
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 1.2em;
-  color: #e91e63;
-  margin-top: 0;
-}
-
-footer {
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #a5557a;
-}
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fef7f1;
-  color: #4a4a4a;
-}
-
 header {
-  background-color: #fce4ec;
-  padding: 10px;
+  background-color: #000; /* nero per contrasto con logo */
+  padding: 20px 15px;
   position: relative;
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #e91e63;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #e91e63; /* rosa fucsia come logo */
+  user-select: none;
 }
 
 .dollar-s {
-  color: #d81b60;
+  color: #ff4081; /* fucsia più chiaro per dettaglio */
 }
 
 .nav-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .menu-icon {
-  font-size: 24px;
+  font-size: 28px;
+  color: #fff;
   cursor: pointer;
+  user-select: none;
 }
 
 .main-nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
+  gap: 40px;
+  margin-top: 15px;
+  background-color: #000;
 }
 
 .main-nav a {
   text-decoration: none;
-  color: #b4004e;
-  font-weight: bold;
+  color: #e91e63;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #ff4081;
+  color: #fff;
 }
 
 .dropdown {
   display: flex;
   flex-direction: column;
-  background-color: #ffe6f0;
-  padding: 10px;
-  border: 1px solid #d8a1b3;
+  background-color: #fff0f6;
+  padding: 12px;
+  border: 1px solid #e91e63;
+  border-radius: 6px;
+  max-width: 220px;
+  margin: 10px auto;
+  user-select: none;
+}
+
+.dropdown div {
+  cursor: pointer;
+  padding: 8px 0;
+  font-weight: 600;
+  color: #c2185b;
+  border-bottom: 1px solid #e91e63;
+  transition: background-color 0.25s ease;
+}
+
+.dropdown div:last-child {
+  border-bottom: none;
+}
+
+.dropdown div:hover {
+  background-color: #fce4ec;
 }
 
 .submenu {
-  background-color: #fff0f5;
-  padding: 10px;
-  margin: 5px 0;
+  background-color: #fff0f6;
+  padding: 10px 15px;
+  margin-top: 8px;
+  border-radius: 6px;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
 }
 
 .submenu a {
   display: block;
-  margin: 5px 0;
-  color: #b4004e;
+  margin: 6px 0;
+  color: #c2185b;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.submenu a:hover {
+  color: #e91e63;
+  text-decoration: underline;
 }
 
 .highlight {
-  color: #e91e63;
-  font-weight: bold;
+  color: #d81b60;
+  font-weight: 700;
 }
 
-.hero-title {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 3rem;
-  color: #e91e63;
+.logo-container {
+  margin-top: 60px;
+}
+
+.logo-img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
 }
 
 .subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #5e5e5e;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #c2185b;
+  font-weight: 600;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #fce4ec;
-  color: #555;
+  background-color: #000;
+  color: #e91e63;
+  padding: 25px 15px;
+  margin-top: 70px;
   font-size: 0.9rem;
-  margin-top: 50px;
+  user-select: none;
 }
 
 .hidden {
   display: none;
-}
-.logo-container {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.logo-img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
 }
