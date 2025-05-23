@@ -97,3 +97,13 @@ footer {
 .hidden {
   display: none;
 }
+.logo-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
