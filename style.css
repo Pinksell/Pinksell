@@ -16,7 +16,7 @@ body {
 
 /* Top banner rosa */
 .top-banner {
-  background-color: #ff4da6; /* rosa fucsia acceso */
+  background-color: #fe86a4; /* rosa modificato */
   color: white;
   text-align: center;
   font-weight: 600;
@@ -30,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ff4da6; /* rosa fucsia */
+  background: #fe86a4; /* rosa modificato */
   padding: 8px 16px;
   position: sticky;
   top: 0;
@@ -64,7 +64,7 @@ body {
 }
 
 .logo {
-  color: #fff;
+  color: #fe86a4; /* rosa modificato */
   font-weight: 700;
   font-size: 1.6rem;
   letter-spacing: 2px;
@@ -110,7 +110,7 @@ body {
   border: none;
   font-size: 1.6rem;
   cursor: pointer;
-  color: #ff4da6;
+  color: #fe86a4; /* rosa modificato */
   font-weight: 700;
   margin-bottom: 16px;
 }
@@ -141,7 +141,7 @@ body {
 
 .menu-list a:hover,
 .submenu-btn:hover {
-  color: #ff4da6;
+  color: #fe86a4; /* rosa modificato */
 }
 
 /* Submenu */
@@ -171,7 +171,7 @@ body {
 }
 
 .login-link a {
-  color: #ff4da6;
+  color: #fe86a4; /* rosa modificato */
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
@@ -184,8 +184,8 @@ body {
   bottom: 20px;
   left: 20px;
   background: none;
-  border: 2px solid #ff4da6;
-  color: #ff4da6;
+  border: 2px solid #fe86a4; /* rosa modificato */
+  color: #fe86a4; /* rosa modificato */
   font-size: 1.8rem;
   padding: 6px 10px;
   border-radius: 8px;
@@ -196,7 +196,7 @@ body {
 }
 
 .wishlist-btn:hover {
-  background-color: #ff4da6;
+  background-color: #fe86a4; /* rosa modificato */
   color: white;
 }
 
@@ -224,7 +224,7 @@ body {
 }
 
 .btn-continue {
-  background-color: #ff4da6;
+  background-color: #fe86a4; /* rosa modificato */
   border: none;
   color: white;
   font-weight: 600;
@@ -236,7 +236,7 @@ body {
 }
 
 .btn-continue:hover {
-  background-color: #e04396;
+  background-color: #e04396; /* lasciato rosa più scuro per hover */
 }
 
 /* Sottotitolo centrale */
@@ -271,4 +271,5 @@ body {
 
 .footer .social {
   margin-bottom: 6px;
+}
  
