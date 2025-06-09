@@ -2,157 +2,144 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pink$ell - Il tuo outfit perfetto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pink$ell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="header-top">NUOVI ARRIVI OGNI SETTIMANA</div>
 
-  <!-- Riquadro superiore rosa -->
-  <div class="top-banner">
-    NUOVI ARRIVI OGNI SETTIMANA
-  </div>
-
-  <!-- Header con menu, logo, carrello -->
-  <header class="header">
-    <button id="menu-btn" aria-label="Apri menu" class="menu-btn">
-      <span></span><span></span><span></span>
-    </button>
-
-    <div class="logo-box">
-      <h1 class="logo">PINK$ELL</h1>
-    </div>
-
-    <div class="cart-box">
-      <button id="cart-btn" aria-label="Apri carrello" class="cart-btn">🛒</button>
-    </div>
+  <header>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="logo">PINK$ELL</div>
+    <button class="cart-btn" onclick="toggleCart()">🛒</button>
   </header>
 
-  <!-- Overlay menu -->
-  <nav id="overlay-menu" class="overlay-menu hidden" aria-hidden="true">
-    <button id="close-menu" class="close-btn" aria-label="Chiudi menu">✕</button>
-    <ul class="menu-list">
-      <li><a href="nuovi-arrivi.html">NUOVI ARRIVI</a></li>
+  <div class="subtitle">
+    IL TUO OUTFIT PERFETTO OGNI GIORNO!<br/>
+    COLLEZIONI IN ARRIVO…
+  </div>
 
-      <li class="has-submenu">
-        <button class="submenu-btn" aria-expanded="false">ABBIGLIAMENTO ▸</button>
-        <ul class="submenu hidden">
-          <li><a href="abiti-jumpsuit.html">Abiti | Jumpsuit</a></li>
-          <li><a href="top-tshirt.html">Top | T-shirt</a></li>
-          <li><a href="jeans-pantaloni.html">Jeans | Pantaloni</a></li>
-          <li><a href="gonne-shorts.html">Gonne | Shorts</a></li>
-          <li><a href="set-tailleur.html">Set | Tailleur</a></li>
-          <li><a href="giacche-cappotti.html">Giacche | Cappotti</a></li>
-          <li><a href="costumi-copricostumi.html">Costumi | Copricostumi</a></li>
-        </ul>
-      </li>
+  <footer>
+    <p>Seguici sui social! @_pinksell</p>
+    <p>2025 Pinksell - Tutti i diritti riservati</p>
+  </footer>
 
-      <li class="has-submenu">
-        <button class="submenu-btn" aria-expanded="false">SCARPE ▸</button>
-        <ul class="submenu hidden">
-          <li><a href="sneakers.html">Sneakers</a></li>
-          <li><a href="sandali.html">Sandali</a></li>
-          <li><a href="tacchi-stivali.html">Tacchi | Stivali</a></li>
-        </ul>
-      </li>
+  <!-- MENU OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="close-btn" onclick="toggleMenu()">✕</button>
 
-      <li class="has-submenu">
-        <button class="submenu-btn" aria-expanded="false">ACCESSORI ▸</button>
-        <ul class="submenu hidden">
-          <li><a href="borse.html">Borse</a></li>
-          <li><a href="bracciali.html">Bracciali</a></li>
-          <li><a href="collane.html">Collane</a></li>
-        </ul>
-      </li>
+    <button>NUOVI ARRIVI</button>
 
-      <li><a href="saldi.html">SALDI</a></li>
-      <li><a href="contatti.html">CONTATTI (WhatsApp)</a></li>
-    </ul>
+    <button onclick="toggleSubmenu('abbigliamentoSub')">ABBIGLIAMENTO +</button>
+    <div class="submenu" id="abbigliamentoSub" style="display: none;">
+      <button>ABITI | JUMPSUITS</button>
+      <button>SET | TAILLEUR</button>
+      <button>T-SHIRT | TOP</button>
+      <button>GONNE | SHORTS</button>
+      <button>JEANS | PANTALONI</button>
+      <button>GIACCHE | CAPPOTTI</button>
+      <button>COSTUMI | COPRICOSTUMI</button>
+    </div>
+
+    <button onclick="toggleSubmenu('scarpeSub')">SCARPE +</button>
+    <div class="submenu" id="scarpeSub" style="display: none;">
+      <button>SNEAKERS</button>
+      <button>SANDALI</button>
+      <button>TACCHI | STIVALI</button>
+    </div>
+
+    <button onclick="toggleSubmenu('accessoriSub')">ACCESSORI +</button>
+    <div class="submenu" id="accessoriSub" style="display: none;">
+      <button>BORSE</button>
+      <button>BRACCIALI</button>
+      <button>COLLANE</button>
+      <button>ANELLI</button>
+      <button>ORECCHINI</button>
+      <button>CINTURE | CAPPELLI | OCCHIALI</button>
+    </div>
+
+    <button>SALDI</button>
+
+    <button onclick="toggleContatti()">CONTATTI</button>
+    <div class="submenu" id="contattiSub" style="display: none;">
+      <p><img src="https://img.icons8.com/ios-filled/16/ffffff/whatsapp.png"/> 3203559659</p>
+    </div>
 
     <div class="login-link">
-      <a href="login.html">Accedi / Registrati</a>
-    </div>
-  </nav>
-
-  <!-- Wishlist fissa in basso a sinistra -->
-  <button id="wishlist-btn" aria-label="Apri lista desideri" class="wishlist-btn">♡</button>
-
-  <!-- Overlay carrello -->
-  <div id="cart-overlay" class="cart-overlay hidden" aria-hidden="true">
-    <button id="close-cart" class="close-btn" aria-label="Chiudi carrello">✕</button>
-    <div id="cart-content" class="cart-content">
-      <p>Il carrello è vuoto</p>
-      <button class="btn-continue" onclick="closeCart()">Continua lo shopping</button>
+      <button onclick="toggleLogin()">Accedi / Registrati</button>
     </div>
   </div>
 
-  <!-- Sottotitolo centrale -->
-  <section class="subtitle-section">
-    <h2>IL TUO OUTFIT PERFETTO OGNI GIORNO!</h2>
-    <p>COLLEZIONI IN ARRIVO…</p>
-  </section>
+  <!-- WISHLIST BUTTON -->
+  <button class="fixed-heart" onclick="toggleWishlist()">♡</button>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="social">
-      Seguici sui social! @_pinksell
-    </div>
-    <div class="copyright">
-      © 2025 Pinksell - Tutti i diritti riservati
-    </div>
-  </footer>
+  <!-- CART OVERLAY -->
+  <div class="overlay" id="cartOverlay" style="display: none;">
+    <button class="close-btn" onclick="toggleCart()">✕</button>
+    <h2>IL TUO CARRELLO</h2>
+    <p>Il tuo carrello è vuoto.</p>
+    <button class="continua-btn" onclick="goHome()">Continua lo shopping</button>
+  </div>
 
+  <!-- WISHLIST OVERLAY -->
+  <div class="overlay" id="wishlistOverlay" style="display: none;">
+    <button class="close-btn" onclick="toggleWishlist()">✕</button>
+    <h2>LISTA DEI DESIDERI</h2>
+    <p>Lista dei desideri vuota.</p>
+    <button class="continua-btn" onclick="goHome()">Continua lo shopping</button>
+  </div>
+
+  <!-- LOGIN / REGISTRAZIONE -->
+  <div class="overlay" id="loginOverlay" style="display: none;">
+    <button class="close-btn" onclick="toggleLogin()">✕</button>
+    <h2>ACCESSO / REGISTRAZIONE</h2>
+    <form>
+      <label>Email:</label><br />
+      <input type="email" required/><br /><br />
+      <label>Password:</label><br />
+      <input type="password" required/><br /><br />
+      <button type="submit" class="continua-btn">Accedi</button>
+      <p>Non hai un account? <a href="#">Registrati</a></p>
+    </form>
+  </div>
+
+  <!-- SCRIPT -->
   <script>
-    // Toggle menu
-    const menuBtn = document.getElementById('menu-btn');
-    const overlayMenu = document.getElementById('overlay-menu');
-    const closeMenuBtn = document.getElementById('close-menu');
-    menuBtn.addEventListener('click', () => {
-      overlayMenu.classList.remove('hidden');
-      overlayMenu.setAttribute('aria-hidden', 'false');
-    });
-    closeMenuBtn.addEventListener('click', () => {
-      overlayMenu.classList.add('hidden');
-      overlayMenu.setAttribute('aria-hidden', 'true');
-    });
+    function toggleMenu() {
+      document.getElementById('menuOverlay').classList.toggle('open');
+    }
 
-    // Toggle submenu
-    const submenuBtns = document.querySelectorAll('.submenu-btn');
-    submenuBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const submenu = btn.nextElementSibling;
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', !expanded);
-        submenu.classList.toggle('hidden');
-      });
-    });
+    function toggleCart() {
+      const overlay = document.getElementById('cartOverlay');
+      overlay.style.display = overlay.style.display === 'none' ? 'block' : 'none';
+    }
 
-    // Wishlist btn placeholder
-    const wishlistBtn = document.getElementById('wishlist-btn');
-    wishlistBtn.addEventListener('click', () => {
-      alert('Lista desideri vuota');
-    });
+    function toggleWishlist() {
+      const overlay = document.getElementById('wishlistOverlay');
+      overlay.style.display = overlay.style.display === 'none' ? 'block' : 'none';
+    }
 
-    // Carrello overlay
-    const cartBtn = document.getElementById('cart-btn');
-    const cartOverlay = document.getElementById('cart-overlay');
-    const closeCartBtn = document.getElementById('close-cart');
+    function toggleLogin() {
+      const overlay = document.getElementById('loginOverlay');
+      overlay.style.display = overlay.style.display === 'none' ? 'block' : 'none';
+    }
 
-    cartBtn.addEventListener('click', () => {
-      cartOverlay.classList.remove('hidden');
-      cartOverlay.setAttribute('aria-hidden', 'false');
-    });
+    function goHome() {
+      window.scrollTo(0, 0);
+      toggleCart();
+      toggleWishlist();
+    }
 
-    closeCartBtn.addEventListener('click', () => {
-      closeCart();
-    });
+    function toggleSubmenu(id) {
+      const menu = document.getElementById(id);
+      menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    }
 
-    function closeCart() {
-      cartOverlay.classList.add('hidden');
-      cartOverlay.setAttribute('aria-hidden', 'true');
+    function toggleContatti() {
+      toggleSubmenu('contattiSub');
     }
   </script>
-
 </body>
 </html>
