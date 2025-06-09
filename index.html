@@ -13,7 +13,13 @@
   <header>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
     <div class="logo">PINK$ELL</div>
-    <button class="cart-btn" onclick="toggleCart()">🛒</button>
+    <button onclick="toggleCart()" class="cart-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-cart" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#d97aa6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 6h15l-1.5 9h-13.5z" />
+    <circle cx="9" cy="21" r="1" />
+    <circle cx="19" cy="21" r="1" />
+  </svg>
+</button>
   </header>
 
   <div class="subtitle">
@@ -80,7 +86,7 @@
     <button class="close-btn" onclick="toggleCart()">✕</button>
     <h2>IL TUO CARRELLO</h2>
     <p>Il tuo carrello è vuoto.</p>
-    <button class="continua-btn" onclick="goHome()">Continua lo shopping</button>
+    <button class="continue-btn" onclick="window.location.href='index.html'">Continua lo shopping</button>
   </div>
 
   <!-- WISHLIST OVERLAY -->
@@ -88,7 +94,7 @@
     <button class="close-btn" onclick="toggleWishlist()">✕</button>
     <h2>LISTA DEI DESIDERI</h2>
     <p>Lista dei desideri vuota.</p>
-    <button class="continua-btn" onclick="goHome()">Continua lo shopping</button>
+    <button class="continue-btn" onclick="window.location.href='index.html'">Continua lo shopping</button>
   </div>
 
   <!-- LOGIN / REGISTRAZIONE -->
