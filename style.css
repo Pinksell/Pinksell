@@ -1,182 +1,306 @@
+/* Reset e base */
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  background-color: #ffffff;
-  color: #ff4da6;
+  background-color: #fff;
+  color: #b3395e;
 }
 
+/* Striscia superiore */
 .header-top {
-  background-color: #f9d5d3;
-  color: white;
+  background-color: #fde6ee;
+  color: #b3395e;
   text-align: center;
-  padding: 0.4em 0;
-  font-size: 0.9em;
+  padding: 0.5em 0;
+  font-size: 0.95em;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
-header {
-  background-color: #ff4da6;
+/* Header */
+.main-header {
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
-  position: relative;
+  padding: 1em 1.2em;
+  border-bottom: 1px solid #fde6ee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.menu-btn {
-  font-size: 1.8em;
+/* Bottoni header */
+.menu-btn,
+.cart-btn {
+  font-size: 1.6em;
   background: none;
   border: none;
+  color: #b3395e;
   cursor: pointer;
-  color: #fff;
+  transition: color 0.3s ease;
 }
 
+.menu-btn:hover,
+.cart-btn:hover {
+  color: #d97aa6;
+}
+
+/* Logo centrale */
 .logo {
-  font-size: 2em;
-  font-weight: bold;
-  color: #fff;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #b3395e;
   text-align: center;
   flex-grow: 1;
-  margin-left: -1.8em;
+  user-select: none;
 }
 
-.cart-btn {
-  font-size: 1.8em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ff4da6;
-  background-color: #fff;
-  border-radius: 50%;
-  padding: 0.3em 0.4em;
-}
-
+/* Sottotitolo */
 .subtitle {
   text-align: center;
-  margin: 2em 1em;
-  font-size: 1.2em;
-  color: #d63384;
+  margin: 2em 1em 3em 1em;
+  font-size: 1.15em;
+  line-height: 1.4em;
+  color: #b3395e;
+  font-weight: 500;
 }
 
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #d63384;
-  margin-top: 3em;
-  padding-bottom: 2em;
-}
-
-footer p {
-  margin: 0.5em 0;
-}
-
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 100%;
-  background-color: #ff4da6;
-  color: white;
-  z-index: 999;
-  padding: 2em 1.5em;
-  overflow-y: auto;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.menu-overlay.open {
-  transform: translateX(0);
-}
-
-.menu-overlay button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.2em;
-  text-align: left;
-  display: block;
-  margin: 1em 0;
-  cursor: pointer;
-}
-
-.menu-overlay .close-btn {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  font-size: 1.5em;
-  color: white;
-}
-
-.submenu {
-  margin-left: 1em;
-  margin-top: -0.5em;
-}
-
-.submenu button {
-  font-size: 1em;
-  margin: 0.5em 0;
-}
-
-.login-link {
-  border-top: 1px solid #fff;
-  padding-top: 1em;
-  font-size: 0.9em;
-  text-decoration: underline;
-  margin-top: 2em;
-  text-align: center;
-  color: white;
-}
-
+/* Pulsante cuore fisso per wishlist */
 .fixed-heart {
   position: fixed;
   bottom: 20px;
   left: 20px;
+  font-size: 1.8em;
   background: none;
   border: none;
-  font-size: 1.8em;
-  color: #ff4da6;
+  color: #b3395e;
   cursor: pointer;
-  z-index: 999;
+  z-index: 1100;
+  user-select: none;
+  transition: color 0.3s ease;
 }
 
-.overlay {
+.fixed-heart:hover {
+  color: #d97aa6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 4em 1em 2em 1em;
+  font-size: 0.9em;
+  color: #b3395e;
+  user-select: none;
+}
+
+footer p {
+  margin: 0.4em 0;
+}
+
+/* OVERLAY GENERICI (menu, cart, wishlist, login) */
+.overlay,
+.menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-  z-index: 1000;
-  padding: 2em;
-  color: #ff4da6;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(243, 225, 232, 0.95);
+  backdrop-filter: blur(5px);
+  z-index: 1050;
+  display: none;
+  flex-direction: column;
+  padding: 2em 1.5em;
+  box-sizing: border-box;
   overflow-y: auto;
 }
 
-.overlay h2 {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-  color: #ff4da6;
+.menu-overlay.open {
+  display: flex;
 }
 
-.overlay .close-btn {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  font-size: 1.5em;
+/* Close button per overlay e menu */
+.close-btn {
+  align-self: flex-end;
+  font-size: 2em;
   background: none;
   border: none;
-  color: #000;
+  color: #b3395e;
   cursor: pointer;
+  margin-bottom: 1em;
+  transition: color 0.3s ease;
 }
 
-.continua-btn {
-  background-color: #ff4da6;
-  color: white;
+.close-btn:hover {
+  color: #d97aa6;
+}
+
+/* Menu overlay: bottoni */
+.menu-overlay button {
+  background: none;
   border: none;
-  padding: 0.7em 1.4em;
-  border-radius: 4px;
-  font-size: 1em;
-  margin-top: 2em;
+  color: #b3395e;
+  font-size: 1.3em;
+  padding: 0.6em 0;
+  text-align: left;
   cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  user-select: none;
+  transition: color 0.3s ease;
+  width: 100%;
+}
+
+.menu-overlay button:hover {
+  color: #d97aa6;
+}
+
+/* Sottomenu nascosti inizialmente */
+.submenu {
+  margin-left: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+.submenu button {
+  font-size: 1.1em;
+  font-weight: 400;
+  padding: 0.3em 0;
+}
+
+/* Contatti submenu */
+.submenu p {
+  color: #b3395e;
+  font-size: 1.1em;
+  margin: 0.3em 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 400;
+}
+
+/* Pulsanti continua */
+.continue-btn {
+  margin-top: 2em;
+  background-color: #b3395e;
+  border: none;
+  color: white;
+  padding: 0.7em 1.6em;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  align-self: center;
+}
+
+.continue-btn:hover {
+  background-color: #d97aa6;
+}
+
+/* Titoli overlay */
+.overlay h2 {
+  color: #b3395e;
+  margin-bottom: 1em;
+  font-weight: 700;
+  user-select: none;
+}
+
+/* Form login */
+#loginOverlay form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+  color: #b3395e;
+}
+
+#loginOverlay label {
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  user-select: none;
+}
+
+#loginOverlay input[type="email"],
+#loginOverlay input[type="password"] {
+  padding: 0.5em 0.7em;
+  border-radius: 4px;
+  border: 1px solid #b3395e;
+  margin-bottom: 1.2em;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#loginOverlay input[type="email"]:focus,
+#loginOverlay input[type="password"]:focus {
+  border-color: #d97aa6;
+}
+
+#loginOverlay button.continua-btn {
+  background-color: #b3395e;
+  border: none;
+  color: white;
+  padding: 0.7em 1.5em;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+#loginOverlay button.continua-btn:hover {
+  background-color: #d97aa6;
+}
+
+#loginOverlay p {
+  margin-top: 1em;
+  font-size: 0.9em;
+  text-align: center;
+  user-select: none;
+}
+
+#loginOverlay a {
+  color: #d97aa6;
+  text-decoration: none;
+}
+
+#loginOverlay a:hover {
+  text-decoration: underline;
+}
+
+/* Icona carrello SVG */
+.icon-cart path,
+.icon-cart circle {
+  stroke: #b3395e;
+  transition: stroke 0.3s ease;
+}
+
+.cart-btn:hover .icon-cart path,
+.cart-btn:hover .icon-cart circle {
+  stroke: #d97aa6;
+}
+
+/* Scrollbar overlay personalizzata */
+.menu-overlay::-webkit-scrollbar,
+.overlay::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-overlay::-webkit-scrollbar-thumb,
+.overlay::-webkit-scrollbar-thumb {
+  background-color: #d97aa6;
+  border-radius: 3px;
+}
+
+/* Responsive semplice */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.8em;
+  }
+  .subtitle {
+    font-size: 1em;
+    margin: 1.5em 1em 2em 1em;
+  }
 }
