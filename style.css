@@ -2,14 +2,14 @@
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  background-color: #fff;
-  color: #b3395e;
+  background-color: #fff0f5;
+  color: #e91e63;
 }
 
 /* Striscia superiore */
 .header-top {
-  background-color: #fde6ee;
-  color: #b3395e;
+  background-color: #ffe0ec;
+  color: #e91e63;
   text-align: center;
   padding: 0.5em 0;
   font-size: 0.95em;
@@ -19,12 +19,12 @@ body {
 
 /* Header */
 .main-header {
-  background-color: #fff;
+  background-color: #fff0f5;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1em 1.2em;
-  border-bottom: 1px solid #fde6ee;
+  border-bottom: 1px solid #ffc2d9;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -36,7 +36,7 @@ body {
   font-size: 1.6em;
   background: none;
   border: none;
-  color: #b3395e;
+  color: #e91e63;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -50,7 +50,7 @@ body {
 .logo {
   font-size: 2.2em;
   font-weight: 700;
-  color: #b3395e;
+  color: #e91e63;
   text-align: center;
   flex-grow: 1;
   user-select: none;
@@ -62,11 +62,11 @@ body {
   margin: 2em 1em 3em 1em;
   font-size: 1.15em;
   line-height: 1.4em;
-  color: #b3395e;
+  color: #e91e63;
   font-weight: 500;
 }
 
-/* Pulsante cuore fisso per wishlist */
+/* Wishlist cuore fisso */
 .fixed-heart {
   position: fixed;
   bottom: 20px;
@@ -74,7 +74,7 @@ body {
   font-size: 1.8em;
   background: none;
   border: none;
-  color: #b3395e;
+  color: #e91e63;
   cursor: pointer;
   z-index: 1100;
   user-select: none;
@@ -90,7 +90,7 @@ footer {
   text-align: center;
   margin: 4em 1em 2em 1em;
   font-size: 0.9em;
-  color: #b3395e;
+  color: #e91e63;
   user-select: none;
 }
 
@@ -98,7 +98,7 @@ footer p {
   margin: 0.4em 0;
 }
 
-/* OVERLAY GENERICI (menu, cart, wishlist, login) */
+/* OVERLAY e MENU */
 .overlay,
 .menu-overlay {
   position: fixed;
@@ -106,7 +106,7 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(243, 225, 232, 0.95);
+  background-color: rgba(255, 224, 236, 0.95);
   backdrop-filter: blur(5px);
   z-index: 1050;
   display: none;
@@ -120,13 +120,13 @@ footer p {
   display: flex;
 }
 
-/* Close button per overlay e menu */
+/* Close button */
 .close-btn {
   align-self: flex-end;
   font-size: 2em;
   background: none;
   border: none;
-  color: #b3395e;
+  color: #e91e63;
   cursor: pointer;
   margin-bottom: 1em;
   transition: color 0.3s ease;
@@ -136,11 +136,11 @@ footer p {
   color: #d97aa6;
 }
 
-/* Menu overlay: bottoni */
+/* Bottoni del menu */
 .menu-overlay button {
   background: none;
   border: none;
-  color: #b3395e;
+  color: #e91e63;
   font-size: 1.3em;
   padding: 0.6em 0;
   text-align: left;
@@ -156,7 +156,7 @@ footer p {
   color: #d97aa6;
 }
 
-/* Sottomenu nascosti inizialmente */
+/* Submenu */
 .submenu {
   margin-left: 1.5em;
   margin-bottom: 1.2em;
@@ -168,9 +168,9 @@ footer p {
   padding: 0.3em 0;
 }
 
-/* Contatti submenu */
+/* Contatti */
 .submenu p {
-  color: #b3395e;
+  color: #e91e63;
   font-size: 1.1em;
   margin: 0.3em 0;
   display: flex;
@@ -182,7 +182,7 @@ footer p {
 /* Pulsanti continua */
 .continue-btn {
   margin-top: 2em;
-  background-color: #b3395e;
+  background-color: #e91e63;
   border: none;
   color: white;
   padding: 0.7em 1.6em;
@@ -200,7 +200,7 @@ footer p {
 
 /* Titoli overlay */
 .overlay h2 {
-  color: #b3395e;
+  color: #e91e63;
   margin-bottom: 1em;
   font-weight: 700;
   user-select: none;
@@ -212,7 +212,7 @@ footer p {
   flex-direction: column;
   max-width: 320px;
   margin: 0 auto;
-  color: #b3395e;
+  color: #e91e63;
 }
 
 #loginOverlay label {
@@ -224,8 +224,8 @@ footer p {
 #loginOverlay input[type="email"],
 #loginOverlay input[type="password"] {
   padding: 0.5em 0.7em;
-  border-radius: 4px;
-  border: 1px solid #b3395e;
+  border-radius: 8px;
+  border: 1px solid #e91e63;
   margin-bottom: 1.2em;
   font-family: 'Playfair Display', serif;
   font-size: 1em;
@@ -239,7 +239,7 @@ footer p {
 }
 
 #loginOverlay button.continua-btn {
-  background-color: #b3395e;
+  background-color: #e91e63;
   border: none;
   color: white;
   padding: 0.7em 1.5em;
@@ -270,10 +270,10 @@ footer p {
   text-decoration: underline;
 }
 
-/* Icona carrello SVG */
+/* Icona carrello */
 .icon-cart path,
 .icon-cart circle {
-  stroke: #b3395e;
+  stroke: #e91e63;
   transition: stroke 0.3s ease;
 }
 
@@ -282,7 +282,7 @@ footer p {
   stroke: #d97aa6;
 }
 
-/* Scrollbar overlay personalizzata */
+/* Scrollbar */
 .menu-overlay::-webkit-scrollbar,
 .overlay::-webkit-scrollbar {
   width: 6px;
@@ -294,11 +294,12 @@ footer p {
   border-radius: 3px;
 }
 
-/* Responsive semplice */
+/* Responsive */
 @media (max-width: 600px) {
   .logo {
     font-size: 1.8em;
   }
+
   .subtitle {
     font-size: 1em;
     margin: 1.5em 1em 2em 1em;
